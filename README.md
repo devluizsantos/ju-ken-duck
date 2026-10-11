@@ -28,7 +28,7 @@ Este projeto foi desenvolvido como parte do meu portfólio de programação, com
 1. Clone este repositório:
 
    ```bash
-   git clone URL_DO_SEU_REPOSITORIO
+   git clone https://github.com/devluizsantos/ju-ken-duck.git
    ```
 
 2. Entre na pasta do projeto:
