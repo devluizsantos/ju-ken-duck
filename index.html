@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jo Ken Duck</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="icon" type="image/png" href="src/images/rock.png">
+</head>
+<body>
+    <audio id="music" src="src/sounds/sounds.mp3" loop></audio>
+    <dialog id="tutorialModal">
+        <div id="modal-content">
+            <div class="modal-txt">
+                <h1>
+                    <span class="ju">Ju</span>
+                    <span class="ken">Ken</span>
+                    <span class="duck">Duck</span>
+                </h1>
+                <p id="duck-quote">"Quá! Finalmente alguém teve coragem de me desafiar..."</p>
+                <p>As regras são simples:</p>
+            </div>
+            <div id="rules">
+                <div class="rule">
+                    <img src="src/images/rock.png" alt="">
+                    <p>quebra</p>
+                    <img src="src/images/scissors.png" alt="">
+                </div>
+                <div class="rule">
+                    <img src="src/images/scissors.png" alt="">
+                    <p>corta</p>
+                    <img src="src/images/paper.png" alt="">
+                </div>
+                <div class="rule">
+                    <img src="src/images/paper.png" alt="">
+                    <p>cobre</p>
+                    <img src="src/images/rock.png" alt="">
+                </div class="rule">
+                <div class="modal-txt">
+                    <p>Se você vencer, o pato ficará muito emburrado.</p>
+                    <p>Se perder... bem,você acabou de ser derrotado por um pato...</p>
+                </div>
+                <button id="playBtn">
+                    Desafiar o pato!
+                </button>
+            </div>
+        </div>
+        </dialog>
+    <div id="screen-device">
+        <div id="topScreen">
+            <div id="duckBg">
+                <img src="src/images/background.png" alt="" id="background">
+                <img src="src/images/bx-bf.png" alt="" id="duck">
+            </div>
+        </div>
+        <div id="duckMoves">
+            <div>
+                <img src="src/images/rock.png" alt="">
+            </div>
+            <div>
+                <img src="src/images/paper.png" alt="">
+            </div>
+            <div>
+                <img src="src/images/scissors.png" alt="">
+            </div>
+        </div>
+        <div id="playerMoves">
+            <button id="rock" class="playerBtn">
+                <img src="src/images/rock.png" alt="">
+            </button>
+            <button id="paper" class="playerBtn">
+                <img src="src/images/paper.png" alt="">
+            </button>
+            <button id="scissors" class="playerBtn">
+                <img src="src/images/scissors.png" alt="">
+            </button>
+        </div>
+    </div>
+    <script src="src/script/script.js"></script>
+</body>
+</html>

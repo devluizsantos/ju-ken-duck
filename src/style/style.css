@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+:root {
+    --txt: #cfcfcf;
+    --bg-black: #0a0a0a;
+    --bg-gray: #171717;
+
+    --red: #7f1d1d;
+    --green: #14532d;
+    --yellow: #713f12;
+    --blue: #1e3a5f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100%;
+}
+
+
+#screen-device {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100dvh;
+}
+
+#topScreen {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+}
+
+#background, #duck {
+    width: 300px;
+}
+
+#duckBg {
+    position: relative;
+    display: inline-block;
+}
+
+#background {
+    border: 4px solid var(--txt);
+}
+
+#duck {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.scoreboard {
+    height: 300px;
+    width: 250px;
+    border: 4px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-gray);
+    justify-content: center;
+}
+
+#duckMoves {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+#duckMoves img {
+    width: 150px;
+    rotate: calc(180deg);
+}
+
+#duckMoves div {
+    background-color: var(--bg-gray);
+    border: 4px solid var(--txt);
+} 
+
+#playerMoves {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+
+#playerMoves button {
+    background-color: var(--bg-gray);
+    border: 4px solid var(--txt);
+}
+
+#playerMoves img {
+    width: 150px;
+}
+
+.selectDuck {
+    background-color: var(--blue) !important;
+    transform: translateY(30px);
+}
+
+.selectPlayer {
+    background-color: var(--blue) !important;
+    transform: translateY(-30px);
+}
+
+.winnerDuck {
+    background-color: var(--green) !important;
+    transform: translateY(30px);
+}
+
+.winnerPlayer {
+    background-color: var(--green) !important;
+    transform: translateY(-30px);
+}
+
+.loseDuck {
+    background-color: var(--red) !important;
+    transform: translateY(30px);
+}
+
+.losePlayer {
+    background-color: var(--red) !important;
+    transform: translateY(-30px);
+}
+
+.drawDuck {
+    background-color: var(--yellow) !important;
+    transform: translateY(30px);
+}
+
+.drawPlayer {
+    background-color: var(--yellow) !important;
+    transform: translateY(-30px);
+}
+
+@media (max-width: 768px) {
+    #topScreen,
+    #playerMoves,
+    #duckMoves {
+        gap: 20px;
+    }
+
+    #duck {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 300px;
+    }
+    
+    #background {
+        width: 300px;
+    }
+
+    .scoreboard {
+        display: none;
+    }
+
+    #duckMoves img {
+        width: 116px;
+    }
+
+    #playerMoves img {
+        width: 116px;
+    }
+}
+
+dialog::backdrop {
+    background: rgb(0 0 0 / 0.6);
+}
+
+dialog {
+    border: 4px solid var(--txt);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    background-color: var(--bg-gray);
+
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--txt);
+}
+
+dialog img {
+    width: 50px;
+}
+
+#modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#rules {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rule {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: "Jersey 10", sans-serif;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.ju {
+    color: #22c55e;
+}
+
+.ken {
+    color: #ef4444;
+}
+
+.duck {
+    color: #facc15;
+}
+
+.modal-txt p {
+    font-size: 1.4rem;
+}
+
+.rule p {
+    font-size: 1.5rem;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+#playBtn {
+    font-family: "Jersey 10", sans-serif;
+    text-align: center;
+    background-color: var(--bg-gray);
+    color: var(--txt);
+    font-size: 1.8rem;
+    
+    border: 4px solid var(--txt);
+    padding: 8px 20px;
+
+    cursor: pointer;
+
+    /* efeito de botão elevado */
+    box-shadow: 0 6px 0 var(--txt);
+
+    transition: transform .1s, box-shadow .1s;
+}
+
+
+#playBtn:active {
+    /* botão afundando */
+    transform: translateY(6px);
+    
+    /* remove a parte levantada */
+    box-shadow: 0 0 0 #777;
+}
+
+@media (max-width: 768px) {
+    dialog {
+        width: 85vw;
+        max-width: 400px;
+        padding: 0;
+    }
+
+    #modal-content {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .modal-txt p {
+        font-size: 1.2rem;
+    }
+
+    .rule p {
+        font-size: 1.5rem;
+    }
+
+    dialog img {
+        width: 45px;
+    }
+
+    #playBtn {
+        font-size: 1.6rem;
+        padding: 8px 15px;
+    }
+}
